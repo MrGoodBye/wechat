@@ -13,9 +13,9 @@ class HomeController extends Controller {
         const key = [TOKEN, timestamp, nonce].sort().join('')
         const sign = require('crypto').createHash('sha1').update(key).digest('hex')
         if (sign === signature) {
-            this.ctx.response.end(echostr)
+            this.ctx.response.status = 200
+            this.ctx.body = echostr
         }
-        this.ctx.body = this.ctx.query
     }
 }
 
