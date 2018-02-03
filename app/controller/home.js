@@ -10,7 +10,7 @@ class HomeController extends Controller {
     }
 
     async test() {
-        const {signature, echostr, timestamp, nonce} = this.ctx.request.body
+        const {signature, echostr, timestamp, nonce} = this.ctx.query
         const key = [TOKEN, timestamp, nonce].sort().join('')
         const sign = require('crypto').createHash('sha1').update(key).digest('hex')
         console.log(sign === signature)
