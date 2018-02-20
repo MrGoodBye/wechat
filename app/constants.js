@@ -4,7 +4,7 @@
 const TOKEN = 'mrgoodbye'
 const API_PREFIX = 'https://api.weixin.qq.com/cgi-bin/'
 const APP_ID = 'wx2199caa92748e091'
-const APP_SECRET = 'f009ae382789c926ce5cf0b1a3ba3617'
+const APP_SECRET = '32e87a54a529c15d2774e4204253f986'
 
 module.exports = {
     TOKEN,

@@ -5,7 +5,7 @@ const {API_PREFIX, APP_ID, APP_SECRET} = require('../constants')
 const request = require('axios')
 
 module.exports = () => {
-    return getToken = async () => {
+    return async () => {
         if (!global.access) {
             global.access = await request.get(`${API_PREFIX}token`, {
                 params: {
