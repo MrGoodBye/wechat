@@ -26,6 +26,9 @@ module.exports = appInfo => {
         xframe: {
             enable: false,
         },
+        csrf: {
+            enable: false,
+        },
     }
 
     return config;
