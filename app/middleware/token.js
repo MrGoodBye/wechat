@@ -7,13 +7,14 @@ const request = require('axios')
 module.exports = () => {
     return async () => {
         if (!global.access) {
-            global.access = await request.get(`${API_PREFIX}token`, {
+            const access = await request.get(`${API_PREFIX}token`, {
                 params: {
                     grant_type: 'client_credential',
                     appid: APP_ID,
                     secret: APP_SECRET
                 }
             })
+            global.access = access.data
         } else {
             console.log(global.access)
         }
