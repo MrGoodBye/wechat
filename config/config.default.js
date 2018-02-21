@@ -7,7 +7,7 @@ module.exports = appInfo => {
     config.keys = appInfo.name + '_1517407371017_7035'
 
     // add your config here
-    config.middleware = ['log','token']
+    config.middleware = []
 
     // IP默认为服务器IP,
     // 监听80端口
